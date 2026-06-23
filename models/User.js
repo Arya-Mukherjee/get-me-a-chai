@@ -12,10 +12,13 @@ const userSchema = new Schema({
   profilepic: { type: String },
 
   coverpic: { type: String },
+  razorpayid : { type: String },
+  razorpaysecret : { type: String },
 
   createdAt: { type: Date, default: Date.now },
 
   updatedAt: { type: Date, default: Date.now },
+  
 });
 
 export default models.User || model("User", userSchema);
