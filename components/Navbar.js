@@ -8,11 +8,11 @@ const Navbar = () => {
   const [showdropdown, setShowdropdown] = useState(false);
 
   return (
-    <nav className="bg-gray-950 text-white flex justify-between px-4 h-16 items-center select-none">
+    <nav className="bg-gray-950 text-white flex justify-between px-4 md:h-16 items-center select-none flex-col md:flex-row">
       <div >
         <Link className="logo font-bold text-lg flex justify-center items-center" href={"/"}>
           <img src="tea.gif" width={44} alt="" className="invertImg relative bottom-[0.3rem]" />
-          <span>Get Me A Chai!</span>
+          <span className="text-xl md:text-base my-3 md:my-0">Get Me A Chai!</span>
         </Link>
       </div>
       {/* <ul className='flex justify-between gap-4'>
@@ -23,7 +23,7 @@ const Navbar = () => {
         <li>Login</li>
       </ul> */}
 
-      <div className='relative flex justify-center items-center  md:block gap-4 select-none'>
+      <div className='relative flex justify-center items-center text-xs md:block gap-4 select-none flex-col md:flex-row'>
         {session && <>
           <button onClick={() => setShowdropdown(!showdropdown)} onBlur={() => {
             setTimeout(() => {

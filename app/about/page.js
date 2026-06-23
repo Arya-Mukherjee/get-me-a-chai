@@ -141,5 +141,5 @@ const About = () => {
 export default About
 
 export const metadata = {
-    title: "About - Get Me A Chai",
+    title: "About - Get Me a Chai",
 }

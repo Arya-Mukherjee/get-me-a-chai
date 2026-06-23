@@ -8,13 +8,14 @@ const Login = () => {
     const { data: session } = useSession()
     const router = useRouter()
     useEffect(() => {
+        document.title = "Login - Get Me A Chai"
         if (session) {
             router.push('/dashboard')
         }
     }, [session, router])
     return (
         <div className='text-white py-14 container mx-auto '>
-            <h1 className='text-2xl text-center font-bold select-none'>Login to Get Your Fans To Support You</h1>
+            <h1 className='text-2xl text-center font-bold select-none'>Login to Get Started</h1>
             <div className="flex flex-col gap-2   p-10  items-center">
                 <button
                     className="flex items-center w-[15rem] cursor-pointer select-none  text-black bg-slate-50 border border-gray-300 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
@@ -150,3 +151,4 @@ const Login = () => {
 }
 
 export default Login
+
